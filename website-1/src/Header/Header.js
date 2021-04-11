@@ -7,7 +7,6 @@ function Header() {
             </span>
             <span id="input">
                 <input type="text"></input>
-                input:
                 <p>Your Progress</p>
             </span>
             <span id="ApplicationNo">
