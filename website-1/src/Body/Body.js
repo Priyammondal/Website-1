@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Body.css';
 import page from './page.jpeg'
 import price from './price.jpeg'
@@ -7,7 +7,10 @@ import zipcode from './zipcode.jpeg'
 import gender from './gender.jpeg'
 import tobaco from './tobaco.jpeg'
 import health from './health.jpeg'
+import male from './male.jpeg'
+import female from './female.jpeg'
 function Body() {
+    const [zip, setZip] = useState("ZipCode");
     return (
         <div className="body">
             <div className="bodytext">
@@ -32,12 +35,14 @@ function Body() {
                             <h2>Gender</h2>
                             <div className="button">
                                 <button>
-                                    <label htmlFor="gender">Male</label>
-                                    <input type="radio" name="gender" />
+                                    <img className="gender-image" src={male} alt="male" />
+                                    <label htmlFor="gender" ><p>MALE</p></label>
+                                    {/* <input type="radio" name="gender" /> */}
                                 </button>
                                 <button>
-                                    <label htmlFor="gender">Female</label>
-                                    <input type="radio" name="gender" />
+                                    <img className="gender-image" src={female} alt="female" />
+                                    <label htmlFor="gender"><p>FEMALE</p></label>
+                                    {/* <input type="radio" name="gender" /> */}
                                 </button>
                             </div>
                         </div>
@@ -45,18 +50,18 @@ function Body() {
                     </div>
                     <div className="dob">
                         <img className="formimage" src={zipcode} alt="zipcode" />
-                        <input type="text" name="zipcode" value="ZIP Code" />
+                        <input  type="text" name="zipcode" value={zip} onChange={(e)=>{setZip(e.target.value)}}/>
                     </div>
                     <div className="dob">
                         <img className="formimage" src={tobaco} alt="tobaco" />
                         <div className="gender">
                             <label htmlFor="">Tobaco</label>
                             <select>
-                                <option value="">Cigarett</option>
-                                <option value="">biri</option>
-                                <option value="">ganja</option>
-                                <option value="">charas</option>
-                                <option value="">gomutra</option>
+                                {/* <option>Cigarett</option>
+                                <option>biri</option>
+                                <option>ganja</option>
+                                <option>charas</option>
+                                <option>gomutra</option> */}
                             </select>
                         </div>
                     </div>
@@ -65,13 +70,19 @@ function Body() {
                         <div className="gender">
                             <label htmlFor="">Health Status</label>
                             <select>
-                                <option value="">Cigarett</option>
-                                <option value="">biri</option>
-                                <option value="">ganja</option>
-                                <option value="">charas</option>
-                                <option value="">gomutra</option>
+                                {/* <option>Cigarett</option>
+                                <option>biri</option>
+                                <option>ganja</option>
+                                <option>charas</option>
+                                <option>gomutra</option> */}
                             </select>
                         </div>
+                    </div>
+                    <div className="quote">
+                        <button id="quote">
+                            <span>&rarr;</span>
+                            <span> Get your quote</span>
+                        </button>
                     </div>
                 </div>
             </div>

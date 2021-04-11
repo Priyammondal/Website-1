@@ -6,7 +6,8 @@ function Header() {
                 Please input your information,for a personalized quote
             </span>
             <span id="input">
-                <input type="text"/>
+                <input type="text"></input>
+                input:
                 <p>Your Progress</p>
             </span>
             <span id="ApplicationNo">
