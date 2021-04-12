@@ -9,7 +9,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    box-shadow: 0px 2px 20px black;
+    box-shadow: 0px 1px 5px grey;
 }
 #input>input{
     width: 35vw;
@@ -24,12 +24,57 @@ nav{
     font-size: 150%;
     margin-left: 5px;
 }
+.new{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 #input{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-right: 10px;
 }
 #ApplicationNo{
     margin-right: 5px;
+}
+
+/* media quary */
+
+@media only screen and (max-width: 400px)
+{
+   nav{
+       flex-wrap: wrap;
+       height: 10vh;
+       box-shadow: 0px 1px 5px grey;
+       width: 400px;
+   }
+   #text{
+       font-size: 100%;
+       padding: 10px;
+       font-weight: bolder;
+   }
+   .new{
+       float:inline-end;
+       margin-top: 15px;
+       justify-content: space-around;
+       display: flex;
+       width: 100%;
+   }
+   #input{
+       /* flex: 2; */
+   }
+   #ApplicationNo{
+       /* flex: 1; */
+       /* flex-wrap: wrap; */
+   }
+   #input>input{
+       width: 50vw;
+   }
+   p, .progress{
+       font-size: 95%;
+       font-weight: 800;
+   }
+
 }

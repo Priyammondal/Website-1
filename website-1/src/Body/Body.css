@@ -94,3 +94,64 @@ button{
     height: 20px;
 }
 
+/* media query */
+
+@media only screen and (max-width: 400px)
+{
+.body{
+    margin-top: 80px;
+    width: 400px;
+}
+#page{
+    height: 30vh;
+    margin-bottom: 60px;
+}
+#price{
+    height: 10vh ;
+    margin-right: 15px;
+}
+.others{
+    display: block;
+}.bodytext{
+    font-size: 70%;
+}
+h1{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+.dob{
+    width: 350px;
+}
+.dob > input{
+    width :300px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.formimage{
+    height:13vh;
+    width: 22vw;
+    margin-right: 20px;
+}
+.quote{
+    width: 370px;
+    display: flex;
+    justify-content: flex-end;
+}
+#quote{
+    background-color: rgb(66, 134, 161);
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+.form{
+    width: 400px;
+}
+.gender{
+    width: 300px;
+}
+
+}
+
